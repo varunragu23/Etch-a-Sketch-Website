@@ -1,0 +1,137 @@
+<!-- Made by Shashwat Prasad -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Document</title>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			nav {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				height: 60px;
+				background-color: #333;
+				color: #fff;
+				font-size: 1rem;
+			}
+
+			.logo {
+				color: #fff;
+				text-decoration: none;
+				font-size: 1.5rem;
+				font-weight: bold;
+				margin-left: 1rem;
+			}
+
+			.nav-links {
+				display: flex;
+				list-style: none;
+				margin-right: 1rem;
+			}
+
+			.nav-links li {
+				margin: 0 1rem;
+			}
+
+			.nav-links a {
+				color: #fff;
+				text-decoration: none;
+			}
+
+			.burger {
+				cursor: pointer;
+				display: none;
+			}
+
+			.burger div {
+				width: 25px;
+				height: 3px;
+				background-color: #fff;
+				margin: 5px;
+			}
+
+			@media screen and (max-width: 768px) {
+				.nav-links {
+					display: none;
+				}
+				.burger {
+					display: block;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<a href="#" class="logo">ETCH A SKETCH</a>
+			<ul class="nav-links">
+				<li><a href="/view.php">View Sketches</a></li>
+				<li><a href="/search.php">Search</a></li>
+			</ul>
+			<div class="burger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</nav>
+
+		<center><h1 style="margin-top: 2em">ETCH A SKETCH!!!</h1></center>
+		<center><h3 style="margin-bottom: 2em">Create a sketch below!!!</h3></center>
+		<center>
+			<div>
+				<button class="grid-selector" id="8">8</button>
+				<button class="grid-selector" id="16">16</button>
+				<button class="grid-selector" id="32">32</button>
+			</div>
+		</center>
+
+		<center>
+			<div id="main-container" class="container">
+				<div id="grid-container" class="grid"></div>
+			</div>
+		</center>
+
+		<div
+			style="
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 1em;
+			"
+		>
+			<form style="">
+				<input
+					type="text"
+					name="name"
+					placeholder="Your name"
+					style="display: block; margin-bottom: 0.5em"
+				/>
+				<input
+					type="text"
+					name="sketch"
+					placeholder="Name of sketch"
+					style="display: block"
+				/>
+			</form>
+		</div>
+		<center><button class="send">Post Sketch</button></center>
+
+		<script src="script.js"></script>
+		<script>
+			const navLinks = document.querySelector(".nav-links");
+			const burger = document.querySelector(".burger");
+
+			burger.addEventListener("click", () => {
+				navLinks.classList.toggle("nav-open");
+			});
+		</script>
+	</body>
+</html>

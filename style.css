@@ -1,0 +1,33 @@
+/* completed by Shashwat Prasad */
+
+#container {
+	position: relative;
+	top: 30px;
+	outline: 2px solid #000;
+	font-size: 0;
+	margin: auto;
+	height: 960px;
+	width: 960px;
+	padding: 0;
+	border: none;
+}
+
+button {
+	background-color: orange;
+}
+
+.grid {
+	max-width: 500px;
+	min-height: 500px;
+	display: grid;
+	margin: 50px;
+}
+
+div.grid {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: center;
+}
+
+.grid-element {
+	background-color: var(--background);
+}
